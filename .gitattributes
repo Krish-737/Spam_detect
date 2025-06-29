@@ -1,0 +1,20 @@
+# Ensure consistent line endings across OS
+* text=auto
+
+# Treat all JS, JSON, HTML, CSS as text and normalize to LF in repo
+*.js   text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+
+# Do not treat images/binaries as text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+
+# Optional: Make shell scripts executable (if any)
+*.sh text eol=lf

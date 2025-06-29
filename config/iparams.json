@@ -1,0 +1,23 @@
+{
+  "domain": {
+    "type": "text",
+    "display_name": "Freshdesk Domain (e.g. yourdomain.freshdesk.com)",
+    "required": true
+  },
+  "accessToken": {
+    "type": "api_key",
+    "display_name": "Access Token",
+    "required": true,
+     "type_attributes": {
+      "product": "freshdesk"
+    }
+  },
+  "groq_api_key": {
+    "type": "text",
+    "display_name": "Groq API Key",
+    "required": true,
+     "type_attributes": {
+      "product": "freshdesk"
+    }
+  }
+}

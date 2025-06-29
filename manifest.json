@@ -1,0 +1,28 @@
+{
+  "platform-version": "2.3",
+  "product": {
+    "freshdesk":{
+      "events": {
+        "onAppInstall":{
+          "handler": "onAppInstall"
+        },
+        "onScheduledEvent": {
+        "handler": "detectSpamTickets"
+      }
+    },
+    "requests": {
+      "get_all_tickets": {},
+      "update_ticket_tag":{},
+      "groq_classify": {},
+      "mark_ticket_as_spam": {}
+
+
+    }
+  }
+},"dependencies": {
+  },
+  "engines": {
+    "node": "18.20.8",
+    "fdk": "9.5.0"
+  }
+}

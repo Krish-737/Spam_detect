@@ -1,0 +1,47 @@
+{
+  "get_all_tickets": {
+    "schema": {
+      "method": "GET",
+      "host": "<%= iparam.domain %>.freshdesk.com",
+      "path": "/api/v2/tickets",
+      "headers": {
+        "Authorization": "Bearer <%= encode(iparam.accessToken) %>",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "update_ticket_tag": {
+    "schema": {
+      "method": "PUT",
+      "host": "<%= iparam.domain %>.freshdesk.com",
+      "path": "/api/v2/tickets/<%= context.ticket_id %>",
+      "headers": {
+        "Authorization": "Bearer <%= encode(iparam.accessToken) %>",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "groq_classify": {
+    "schema": {
+      "method": "POST",
+      "host": "api.groq.com",
+      "path": "/openai/v1/chat/completions",
+      "headers": {
+        "Authorization": "Bearer <%= iparam.groq_api_key %>",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "mark_ticket_as_spam": {
+  "schema": {
+    "method": "PUT",
+    "host": "<%= iparam.domain %>.freshdesk.com",
+    "path": "/api/v2/tickets/<%= context.ticket_id %>/spam",
+    "headers": {
+      "Authorization": "Bearer <%= encode(iparam.accessToken) %>",
+      "Content-Type": "application/json"
+    }
+  }
+}
+  
+}

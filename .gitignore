@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Build artifacts
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment or config
+.env
+.env.local
+
+# FDK temp & runtime
+.fdk/
+.fdkignore
+server/test_data
+coverage/
