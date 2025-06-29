@@ -1,25 +1,24 @@
-## Freshdesk App Project
+#  Freshdesk Spam Detection App (with Groq AI)
 
-Congratulations on creating your App Project! Feel free to replace this text with your project description.
+This Freshdesk serverless app automatically detects and tags spam tickets using Groq's LLM API. Tickets are analyzed every 10 minutes and marked accordingly based on content.
 
-### Project folder structure explained
+---
 
-    .
-    ├── README.md                  This file.
-    ├── config                     Installation parameter configs.
-    │   ├── iparams.json           Installation parameter config in English language.
-    │   └── iparam_test_data.json  Installation parameter data for local testing.
-    └── manifest.json              Project manifest.
-    └── server                     Business logic for remote request and event handlers.
-        ├── lib
-        │   └── handle-response.js
-        ├── server.js
-        └── test_data
-            ├── onAppInstall.json
-            ├── onAppUninstall.json
-            ├── onContactCreate.json
-            ├── onContactUpdate.json
-            ├── onConversationCreate.json
-            ├── onExternalEvent.json
-            ├── onTicketCreate.json
-            └── onTicketUpdate.json
+##  Features
+
+-  Scheduled check every 10 minutes (auto-run)
+-  Spam classification using Groq LLM (`gemma2-9b-it`)
+-  Adds `not_spam` tag for non-spam tickets
+-  Supports real-time analysis based on ticket subject and description
+-  Git-safe line ending handling with `.gitattributes`
+
+---
+
+##  Setup
+
+### 1. Clone & Install FDK
+
+```bash
+npm install -g fdk
+git clone https://github.com/your-org/freshdesk-spam-detector.git
+cd freshdesk-spam-detector
